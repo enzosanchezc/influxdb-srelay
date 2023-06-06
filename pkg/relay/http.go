@@ -75,7 +75,7 @@ func NewHTTP(cfg *config.HTTPConfig) (*HTTP, error) {
 	h.log = utils.GetConsoleLogFormated(cfg.LogFile, cfg.LogLevel)
 	//AccessLog Output
 
-	h.acclog = utils.GetConsoleLogFormated(cfg.AccessLog, "debug")
+	h.acclog = utils.GetConsoleLogFormated(cfg.AccessLog, cfg.LogLevel)
 
 	h.rp = cfg.DefaultRetentionPolicy
 
